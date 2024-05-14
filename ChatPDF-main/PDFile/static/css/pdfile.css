@@ -1,0 +1,198 @@
+#main-container {
+    display: flex;
+    height: calc(100vh - 60px); /* Adjust according to header height */
+    position: fixed;
+}
+
+#history-container {
+    position: fixed;
+    top: 80px; /* Adjust top position based on your header height */
+    bottom: 0;
+    left: 0;
+    width: 300px; /* Adjust width of the sidebar */
+    height: 600px;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+    z-index: 1; /* Ensure it's above other content */
+    border-radius: 10px;
+}
+
+#chat-container {
+    margin-left: 300px;
+    margin-right: 10px;
+    padding: 10px;
+    overflow-y: auto;
+    width: fit-content;
+    max-width: 850px;
+    min-width: 850px;
+}
+
+#history {
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.history-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    font-family: Arial;
+    font-size: 12pt;
+}
+
+.history-item:hover {
+    background-color: #e9ecef;
+    cursor: pointer;
+}
+
+#response {
+    overflow-y: scroll;
+    max-height: calc(100vh - 200px);
+}
+
+.message-container {
+    margin-bottom: 20px;
+    clear: both;
+    overflow: auto;
+}
+
+#loading-gif {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999; /* Ensure it appears above other content */
+}
+
+#loading-gif img {
+    width: 10vh; /* Adjust the width as needed */
+    height: 10vh; /* Adjust the height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+#loading-label {
+    display: none;
+    position: fixed;
+    text-align: center;
+    margin-top: 20px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    font-family: Arial;
+    font-size: 12pt;
+}
+
+.user-message {
+    background-color: #e5e5e5;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+    float: right;
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+  }
+  
+  .bot-message {
+    background-color: #bee5eb;
+    padding: 10px;
+    margin-top: 5px;
+    margin-left: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+    float: left;
+    clear: both;
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+  }
+
+#user_input {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    max-width: 600px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.user-message {
+    background-color: #e5e5e5;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+    float: right;
+    clear: both;
+}
+
+#user_query {
+    width: calc(100% - 90px); /* Adjust as needed */
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#send_button {
+    width: 80px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: none;
+    background-color: #d93025;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#send_button:hover {
+    background-color: #45a049;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo img {
+    width: 75px; /* Adjust the width of the logo as needed */
+    height: 75px;
+}
+
+h1 {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 24px; /* Adjust the font size as needed */
+    margin-left: 10px;
+}
+
+h1 span {
+    font-weight: bold; /* Optional: make the "PDF" part bold */
+    font-style: normal;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
